@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #0f5977;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,25 +19,64 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: rgb(70, 84, 216);
+  border-radius: 10px;
+ 
+  
+}
+#link {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  align-items: center;
+}
+#link:hover {
+  background-color:rgb(29, 35, 92);
+  color: white;
+}
+
 .container {
   margin: 30px auto;
   width: 350px;
+  border:rgb(70, 84, 216) solid 2px; 
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(116, 173, 230);
+  
 }
 
 h1 {
   letter-spacing: 1px;
   margin: 0;
+  text-align: center;
+}
+h2{
+  font-size: xx-large;
+  text-align: center;
 }
 
 h3 {
   border-bottom: 1px solid #bbb;
   padding-bottom: 10px;
   margin: 40px 0 10px;
+  text-align: center;
 }
 
 h4 {
-  margin: 0;
+  margin-top: 10px;
   text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+  background-color: lightskyblue;
+
 }
 
 .inc-exp-container {
@@ -47,21 +86,26 @@ h4 {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  border-radius: 10px;
 }
 
 .inc-exp-container > div {
   flex: 1;
   text-align: center;
+  
+  
 }
 
 .inc-exp-container > div:first-of-type {
   border-right: 1px solid #dedede;
+  
 }
 
 .money {
   font-size: 20px;
   letter-spacing: 1px;
   margin: 5px 0;
+  
 }
 
 .money.plus {
@@ -80,24 +124,32 @@ label {
 input[type='text'],
 input[type='number'] {
   border: 1px solid #dedede;
-  border-radius: 2px;
+  border-radius: 10px;
   display: block;
   font-size: 16px;
   padding: 10px;
   width: 100%;
 }
+input[type="text"]:focus{
+  border-color:dodgerblue;
+  box-shadow: 0 0 8px dodgerblue;
+}
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: rgb(70, 84, 216);
   box-shadow: var(--box-shadow);
   color: #fff;
-  border: 0;
+  border-radius: 10px;
   display: block;
   font-size: 16px;
   margin: 10px 0 30px;
   padding: 10px;
   width: 100%;
+}
+.btn:hover {
+  background-color:rgb(29, 35, 92);
+  color: white;
 }
 
 .btn:focus,
@@ -129,6 +181,7 @@ input[type='number'] {
 .list li.minus {
   border-right: 5px solid #c0392b;
 }
+
 
 .delete-btn {
   cursor: pointer;

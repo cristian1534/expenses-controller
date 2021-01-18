@@ -1,23 +1,26 @@
 import React from 'react';
-import { Header } from './components/Header';
-import { Balance } from './components/Balance';
-import { IncomeExpenses } from './components/IncomeExpenses';
-import { TransactionList } from './components/TransactionList';
-import { AddTransaction } from './components/AddTransaction';
+import { Home } from './components/Home';
+import { History } from './components/History';
+import { GlobalProvider } from './context/GlobalState';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 
-
-import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
     <GlobalProvider>
-       <Header />
         <div className="container">
-            <Balance />
-            <IncomeExpenses />
-            <TransactionList />
-            <AddTransaction />
+          <Router>
+            <ul>
+              <li><Link to="/" id="link">Home</Link></li>
+              <li><Link to="/history" id="link">Transactions History</Link></li>
+            </ul>
+            <Switch>
+              <Route path="/" exact component= { Home } />
+              <Route path="/history" exact component= { History }/>
+            </Switch>
+            
+          </Router>     
         </div>
     </GlobalProvider>
   );
