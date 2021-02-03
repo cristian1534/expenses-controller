@@ -7,7 +7,8 @@ import './App.css';
 
 
 function App() {
-  return (
+  return ( 
+    //para permitir el acceso de context
     <GlobalProvider>
         <div className="container">
           <Router>
@@ -25,5 +26,4 @@ function App() {
     </GlobalProvider>
   );
 }
-
 export default App;

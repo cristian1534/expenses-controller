@@ -4,17 +4,17 @@ import axios from 'axios';
 
 // Initial state
 const initialState = {
-  transactions: [],
+  transactions: [], //estado inicial
   error: null,
   loading: true
 }
 
 // Create context
-export const GlobalContext = createContext(initialState);
+export const GlobalContext = createContext(initialState);  //creo el contexto
 
 // Provider component
 export const GlobalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState);
+  const [state, dispatch] = useReducer(AppReducer, initialState); // dispacher es del reducer que viene del appReducer, y toma el estado inicial
 
   // Actions
   async function getTransactions() {
@@ -51,7 +51,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function addTransaction(transaction) {
     const config = {
-      headers: {
+      headers: {          //configuracion par axios para convertir a json() lo que mande
         'Content-Type': 'application/json'
       }
     }
@@ -71,7 +71,7 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  return (<GlobalContext.Provider value={{
+  return (<GlobalContext.Provider value={{ //exporta para el app.js para el uso global
     transactions: state.transactions,
     error: state.error,
     loading: state.loading,

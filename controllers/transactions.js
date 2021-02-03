@@ -1,4 +1,4 @@
-const Transaction = require('../models/Transactions');
+const Transaction = require('../models/Transactions'); //traigo los schema creados
 
 exports.getTransactions = async (req, res, next ) => {
         try {
@@ -19,7 +19,7 @@ exports.getTransactions = async (req, res, next ) => {
 exports.addTransactions = async (req, res, next ) => {
     try {
 
-        const { text, amount } = req.body
+        const { text, amount } = req.body //Post method
 
         const transaction = await Transaction.create(req.body)
       

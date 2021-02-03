@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const TransactionSchema = new mongoose.Schema({
     text: {
         type: String,
-        trim: true,
+        trim: true, //espacios en blanco
         required: [true, 'Fill up here please.']
     },
     amount: {
@@ -13,3 +13,5 @@ const TransactionSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Transaction', TransactionSchema)
+
+//aca creo las schema para Mongo: texto y monto

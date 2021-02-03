@@ -4,7 +4,7 @@ import { Transaction } from './Transaction';
 
 
 export const TransactionList = () => {
-    const { transactions, getTransactions } = useContext(GlobalContext);
+    const { transactions, getTransactions } = useContext(GlobalContext); //transactions es un array y hay que mapearlo
 
     useEffect(() =>{
         getTransactions();

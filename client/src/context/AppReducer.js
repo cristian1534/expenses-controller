@@ -11,12 +11,12 @@ export default (state, action) => {
         case 'DELETE_TRANSACTION':
                 return {
                     ...state, 
-                    transactions: state.transactions.filter(transaction => transaction._id !== action.payload)
+                    transactions: state.transactions.filter(transaction => transaction._id !== action.payload) //retorna todas menos la que coincide el ID.
                 }
         case 'ADD_TRANSACTION':
                 return{
                     ...state,
-                    transactions: [...state.transactions, action.payload]
+                    transactions: [...state.transactions, action.payload]  //agrega la nueva transaccion.
                 }
         case 'TRANSACTION_ERROR':
             return {

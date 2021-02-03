@@ -31,3 +31,6 @@ export const IncomeExpenses = () => {
         </div>
     )
 }
+ 
+//income, total del ingreso
+//expense, total del egreso
